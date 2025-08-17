@@ -1,7 +1,27 @@
 <h2>Listado de Customers</h2>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of customers">
+      <th scope="row">{{c.id}}</th>
+      <td>{{c.firstName}}</td>
+      <td>{{c.lastName}}</td>
+      <td>{{c.email}}</td>
+    </tr>
+  </tbody>
+</table>
+<!--
 <ul>
     <li *ngFor="let c of customers">
         {{c.id}} - {{c.firstName}} - {{c.lastName}} - {{c.email}}
     </li>
 </ul>
+-->
