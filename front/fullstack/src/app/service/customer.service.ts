@@ -15,4 +15,12 @@ export class CustomerService {
   getCustomerList():Observable<Customer []>{
     return this.http.get<Customer[]>(this.api);
   }
+
+  createCustomer(customer: Customer):Observable<Customer>{
+    return this.http.post<Customer>(this.api, customer);
+  }
+
+  deleteCustomerById(id : number ):Observable<any>{
+    return this.http.delete(this.api+'/'+id);
+  }
 }

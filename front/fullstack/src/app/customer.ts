@@ -1,6 +1,6 @@
-export class Customer {
-    constructor(public id : number,
-        public firstName: string,
-        public lastName : string,
-        public email : string){}
+export interface Customer {
+  id?: number;   // opcional porque lo genera la BD
+  firstName: string;
+  lastName: string;
+  email: string;
 }
